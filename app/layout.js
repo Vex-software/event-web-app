@@ -1,5 +1,5 @@
 import React from './globals.css'
-import Header from '../pages/header'
+import Header from '../components/header'
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,6 +9,9 @@ export const metadata = {
 export default function RootLayout() {
   return (
     <html lang="en">
+       <head>
+          <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet" />
+        </head>
       <body>
         <Header />
       </body>
