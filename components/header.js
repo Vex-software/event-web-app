@@ -1,26 +1,32 @@
 import Link from 'next/link'
 import React from 'react'
+import Button from '@/components/form/button'
+import ButtonV2 from '@/components/form/buttonV2'
+import H2 from '@/components/texts/h2'
+import Li from '@/components/texts/li'
 
 function Header() {
   return (
     <div className='w-full  flex p-4 items-center border-b-2 border-[#0000000c]'>
         <div className='w-1/4 text-center'>
-            <h2 className="font-['Rajdhani'] text-4xl font-black text-[#4f4cee]">
-                WeX
-            </h2>
+            <H2 size='3rem' color="#4F4CEE">WeX</H2>
         </div>
         <div className='w-1/2 '>
-            <ul className='flex justify-evenly font-["Rajdhani"] text-xl font-bold'>
-                <li><Link className=' hover:border-b-2 border-[#4f4cee] ' href="/">Concerts</Link></li>
-                <li><Link className=' hover:border-b-2 border-[#4f4cee] ' href="/">Arts</Link></li>
-                <li><Link className=' hover:border-b-2 border-[#4f4cee] ' href="/">Conference</Link></li>
-                <li><Link className=' hover:border-b-2 border-[#4f4cee] ' href="/">Movies</Link></li>
-                <li><Link className=' hover:border-b-2 border-[#4f4cee] ' href="/">International</Link></li>
+            <ul className='flex justify-evenly font-["Rajdhani"] '>
+                <Li href="/" size="2" margin="4" padding="2" color="red-500" cursor="pointer" listStyle="none" fontWeight="bold">Link Text</Li>
+                <Li href="/">Concerts</Li>
+                <Li href="/">Arts</Li>
+                <Li href="/">Conference</Li>
+                <Li href="/">Movies</Li>
+                <Li href="/">International</Li>
             </ul>
         </div>
         <div className='w-1/4 text-center font-["Rajdhani"] text-xl font-bold'>
-            <button className='mr-5    border-2 px-3 py-1 rounded border-[#4F4CEE]'>Log In</button>
-            <button className='border-2 border-[#4F4CEE] px-3 py-1 rounded bg-[#4F4CEE] text-white'>Sign Up</button>
+
+            <Button size='1.2rem' margin="3px" padding=".5rem 2.5rem" >Sign Up</Button>
+            <ButtonV2 size='1.2rem' margin="3px" padding=".5rem 2.5rem">Log In</ButtonV2>
+
+
         </div>
     </div>
   )
