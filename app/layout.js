@@ -1,7 +1,7 @@
 
 import React from './globals.css'
-import Header from '../components/header'
-import Footer from '../components/footer'
+import Header from '../components/header.jsx'
+import Footer from '../components/footer.jsx'
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,7 +13,7 @@ export default function RootLayout({children}) {
   return (
     <html lang="en">
        <head>
-          <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet" />
         </head>
       <body>
         <Header />
