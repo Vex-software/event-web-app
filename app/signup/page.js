@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import Checkbox from '@/components/form/checkbox'
-import Button from '@/components/form/button'
-import FullInput from '@/components/form/full_input'
-import H2 from '@/components/texts/h2'
+import Checkbox from '@/components/form/checkbox.jsx'
+import Button from '@/components/form/button.jsx'
+import FullInput from '@/components/form/full_input.jsx'
+
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <main>
       <div className='mt-20 w-full mb-24'>
           <div className='w-3/5 text-left mx-auto mb-16 '>
-            <H2>Sign Up |</H2>
+          <h2  className='font-["Rajdhani"] text-5xl text-[#4F4CEE] font-bold text-[3rem] '>Sign Up</h2>
+
           </div>
           <div className='w-3/6 text-center mx-auto mb-10 leading-10'>
             <form method='' action='/' className='text-center relative font-["Rajdhani"] '>

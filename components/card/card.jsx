@@ -1,17 +1,16 @@
 import Image from 'next/image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
+import { GoLocation } from 'react-icons/go';
 
 function card({img, alt, mounth, day, head, desc, location}) {
     if (!mounth || !day || !location || !alt || !head) {
-    throw new Error('img, mounth, day, location, alt and head are required parameters.');
-  }
-  else if(!img){
-    img="/img/card/default.jpg"
-}
+        throw new Error('img, mounth, day, location, alt and head are required parameters.');
+      }
+      else if(!img){
+        img="/img/card/default.jpg"
+    }
   return (
-    <div className='w-[18rem] hover:shadow-lg shadow-[#7B61FF] cursor-pointer font-["Raleway"] border-2 hover:border-[#7B61FF] border-[#bdbdbd85] rounded-md'>
+    <div className='w-[18rem] active:shadow-[-5px_-5px_0px_1px_rgba(0,34,186,1)] hover:shadow-[6px_6px_0px_1px_rgba(0,34,186,1)] cursor-pointer font-["Raleway"] border-2  border-[rgba(0,34,186,0.3)] rounded-md'>
         <div>
             <Image className='w-full rounded-tl-md rounded-tr-md object-cover' src={img} width="285" height="184" alt={alt}></Image>
         </div>
@@ -24,8 +23,8 @@ function card({img, alt, mounth, day, head, desc, location}) {
                 <h4 className='font-bold '>{head}</h4>
                 <p className='text-[14px]'>{desc}</p>
                 <div className='flex items-center'>
-                    <FontAwesomeIcon icon={faLocationDot} className="fab" style={{ width: '15px', height: '15px' }} />
-                    <p>{location}</p>
+                <GoLocation className='mr-2 font-bold'/>
+                    <p className='font-medium'>{location}</p>
                 </div>
             </div>
         </div>
