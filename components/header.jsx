@@ -39,7 +39,7 @@ function Header ({scrolled}) {
             </li>
           </ul>
       </div>
-  <div className="z-30 text-center flex items-center  mr-[3rem]  md:order-2 relative">
+  <div className="z-30 text-center flex items-center md:mr-[3rem] mr-[1rem]  md:order-2 relative">
       <button type="button" className="flex mr-3 text-sm  rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 "  aria-expanded={isDropdownOpen} onClick={toggleDropdown} data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
         <CgProfile className='text-4xl text-[#4f4cee]'></CgProfile>
       </button>

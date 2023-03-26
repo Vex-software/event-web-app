@@ -1,6 +1,6 @@
 import React from 'react'
 
-function checkbox({id, name, message}) {
+function Checkbox({id, name, message}) {
   if (!id || !name || !message) {
     throw new Error('id, name and message are required parameters.');   
   }
@@ -12,7 +12,7 @@ function checkbox({id, name, message}) {
   )
 }
 
-export default checkbox
+export default Checkbox
 
 // Kullanımı:
 //   <Checkbox id="asd" name="asda" message="aydınlatma metni"></Checkbox>

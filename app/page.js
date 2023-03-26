@@ -7,6 +7,7 @@ import Input from '@/components/form/input.jsx'
 import FullInput from '@/components/form/full_input.jsx'
 import Checkbox from '@/components/form/checkbox.jsx'
 import PassInput from '@/components/form/pass.jsx'
+import DatePicker from '@/components/datetime/searchBar.jsx'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,7 +19,7 @@ export default function Home() {
     <main>
       <div className='p-10'>
           <div className='m-10'>
-            <Input name="name" width="200px" type="text" id="name" placeholder="name" />
+            <Input name="name" type="text" id="name" placeholder="name" />
           </div>
         <div className='m-10'>
             <FullInput label="First Name" width="200px"  type="text" name="name" id="name" placeholder="name" ></FullInput>
@@ -32,6 +33,9 @@ export default function Home() {
         <div className='m-10'>
             <Button >merhaba</Button>
         </div>
+
+
+        <DatePicker></DatePicker>
 
       </div>
     </main>
