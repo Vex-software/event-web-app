@@ -8,6 +8,7 @@ import FullInput from '@/components/form/full_input.jsx'
 import Checkbox from '@/components/form/checkbox.jsx'
 import PassInput from '@/components/form/pass.jsx'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -26,11 +27,12 @@ export default function Home() {
             <Checkbox id="asd" name="asda" message="Aydınlatma Metnini okudum onaylıyorum."></Checkbox>
         </div>
         <div className='m-10'>
-            <PassInput label="Password" width="400px" name="name" id="name" placeholder="Password" ></PassInput>
+            <PassInput label="Password" width="200px" name="name" id="name" placeholder="Password" ></PassInput>
         </div>
         <div className='m-10'>
-            <Button disabled>merhaba</Button>
+            <Button >merhaba</Button>
         </div>
+
       </div>
     </main>
   )

@@ -16,7 +16,7 @@ export default function RootLayout({children}) {
           <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&family=Raleway:wght@300&display=swap" rel="stylesheet" />
         </head>
       <body>
-        <Header scrolled />
+        <Header scrolled/>
        {children}
         <Footer />
       </body>

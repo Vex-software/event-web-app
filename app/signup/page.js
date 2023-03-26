@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Checkbox from '@/components/form/checkbox.jsx'
-import Button from '@/components/form/button.jsx'
+import Button from '@/components/buttons/button.jsx'
 import FullInput from '@/components/form/full_input.jsx'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,24 +18,22 @@ export default function Home() {
               <div className='flex justify-evenly px-20'>
                 {/* left */}
                 <div className='mr-10'>
-                <FullInput label="First Name" type="text" name="first_name" id="first_name" placeholder="First Name" />
-                <FullInput label="Last Name" type="text" name="last_name" id="last_name" placeholder="Last Name" />
-                <FullInput label="Email Adress" type="email" name="email" id="email" placeholder="Email Adress" />
+                <FullInput width="300px" label="First Name" margin="2rem" type="text" name="first_name" id="first_name" placeholder="First Name" />
+                <FullInput width="300px" label="Last Name" margin="2rem" type="text" name="last_name" id="last_name" placeholder="Last Name" />
+                <FullInput width="300px" label="Email Adress" margin="2rem" type="email" name="email" id="email" placeholder="Email Adress" />
                 </div>
                 {/* right */}
                 <div>
-                <FullInput label="Phone Number" type="text" name="number" id="number" placeholder="Phone Number" />
-                <FullInput label="Password" type="password" name="password" id="password" placeholder="Password" />
-                <FullInput label="Password" type="password" name="password-r" id="password-r" placeholder="Password" />
+                <FullInput width="300px" label="Phone Number" type="text" margin="2rem" name="number" id="number" placeholder="Phone Number" />
+                <FullInput width="300px" label="Password" type="password" margin="2rem" name="password" id="password" placeholder="Password" />
+                <FullInput width="300px" label="Password" type="password" margin="2rem" name="password-r" id="password-r" placeholder="Password" />
                 </div>
               </div>
               <div className='text-left ml-14'>
-                  <Checkbox id="myCheckbox" name="myCheckbox">
-                    Kişisel verilerimin işlenmesine yönelik <span className=' border-b-2 border-[#0000005b]'>aydınlatma metnini</span> okudum ve kabul ediyorum.
-                  </Checkbox>
-                  <Checkbox id="myCheckbox" name="myCheckbox">
-                    Kampanyalardan haberdar olabilmem için kişisel verilerimin işlenmesini ve tarafıma elektronik ileti gönderilmesini kabul ediyorum.
-                  </Checkbox>
+                  <Checkbox id="asd" name="asda" message=" Kişisel verilerimin işlenmesine yönelik aydınlatma metnini okudum ve kabul ediyorum."></Checkbox>
+                  <Checkbox id="asd" name="asda" message="Kampanyalardan haberdar olabilmem için kişisel verilerimin işlenmesini ve tarafıma elektronik ileti gönderilmesini kabul ediyorum."></Checkbox>
+
+
               </div>
               <Button size='2.25rem'>Sign Up</Button>
             </form>
