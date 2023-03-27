@@ -1,10 +1,9 @@
 "use client"
 import React, { useState } from "react";
+import { Button, Input } from '@/components'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { AiOutlineCalendar } from 'react-icons/ai';
-import Input from '@/components/form/input.jsx';
-import Button from '@/components/button/index.jsx';
 
 function SearchBar() {
   const [dateRange, setDateRange] = useState([null, null]);
@@ -17,7 +16,7 @@ function SearchBar() {
         <Input name="name" width="100%" type="text" id="name" placeholder="Search by events, name, location, and more" />
       </div>
 
-      <div className="w-full font-[Rajdhani] font-bold relative">
+      <div className="w-full font-bold relative">
         <DatePicker
           className="border-2 border-[#0000006c] rounded-lg px-8 py-1 text-xl w-full"
           placeholderText="Select Date"

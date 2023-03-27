@@ -10,11 +10,11 @@ export default function Home() {
     <main>
       <div className='mt-20 w-full mb-24'>
         <div className='w-3/5 text-left mx-auto mb-16 '>
-          <h2 className='font-["Rajdhani"] text-5xl text-[#4F4CEE] font-bold text-[3rem] '>Sign Up</h2>
+          <h2 className=' text-5xl text-[#4F4CEE] font-bold text-[3rem] '>Sign Up</h2>
 
         </div>
         <div className='w-3/6 text-center mx-auto mb-10 leading-10'>
-          <form method='' action='/' className='text-center relative font-["Rajdhani"] '>
+          <form method='' action='/' className='text-center relative '>
             <div className='flex justify-evenly px-20'>
               {/* left */}
               <div className='mr-10'>
