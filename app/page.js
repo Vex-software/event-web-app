@@ -1,7 +1,6 @@
 import Image from 'next/image'
 
-import { Button, Card, CardSoon, Input, Datetime } from '@/components'
-
+import { Button, Card, CardSoon, Input, Checkbox, InputPass, Toggle, Dropdown } from '@/components'
 
 // import Checkbox from '@/components/form/checkbox.jsx'
 // import PassInput from '@/components/form/pass.jsx'
@@ -13,26 +12,40 @@ export default function Home() {
 
   return (
     <main>
-      <div className='p-10'>
-        <div className='m-10'>
-          <Input name="name" type="text" id="name" placeholder="name" />
-        </div>
-        <div className='m-10'>
-          {/* <FullInput label="First Name" width="200px" type="text" name="name" id="name" placeholder="name" ></FullInput> */}
-        </div>
-        <div className='m-10'>
-          {/* <Checkbox id="asd" name="asda" message="Aydınlatma Metnini okudum onaylıyorum."></Checkbox> */}
-        </div>
-        <div className='m-10'>
-          {/* <PassInput label="Password" width="200px" name="name" id="name" placeholder="Password" ></PassInput> */}
-        </div>
-        <div className='m-10'>
-          <Button >merhaba</Button>
+      <div className='p-2'>
+        <div className='mb-4'>
+            <Button>Deneme</Button>
         </div>
 
+        <div className='mb-4'>
+          <Card></Card>
+        </div>
 
-        <Datetime />
+        <div className='mb-4'>
+          <CardSoon title='Eypio Konseri!' day='3'></CardSoon>
+        </div>
 
+        <div className='mb-4'>
+         <Input label="First Name" placeholder="First Name"></Input>
+        </div>
+
+        <div className='mb-4'>
+         <Checkbox id="checkbox" name="message" message="Lorem ipsum dolor sit amet."></Checkbox>
+        </div>
+
+        <div className='mb-4'>
+         <InputPass label="Password" placeholder="Password"></InputPass>
+        </div>
+
+        <div className='mb-4'>
+         <Toggle>Online</Toggle>
+        </div>
+
+        <div className='mb-4'>
+         <Dropdown></Dropdown>
+        </div>
+     
+      
       </div>
     </main>
   )
