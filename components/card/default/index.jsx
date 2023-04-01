@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import { GoLocation } from 'react-icons/go';
 
-function Card({ img = "/img/card/default.jpg", alt, mounth, day, head, desc, location }) {
+function Card({ img = "/card/default.jpg", alt, mounth="April", day="08", head="Default Title", desc="Lorem ipsum dolor sit amet.", location="Default / Location" }) {
     return (
         <div className='w-[18rem] active:shadow-[-5px_-5px_0px_1px_rgba(0,34,186,1)] hover:shadow-[6px_6px_0px_1px_rgba(0,34,186,1)] cursor-pointer font-["Raleway"] border-2  border-[rgba(0,34,186,0.3)] rounded-md'>
             <div>
