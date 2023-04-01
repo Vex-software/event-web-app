@@ -32,7 +32,3 @@ function Card({ data }) {
 }
 
 export default Card
-
-
-// Kullanımı;
-// <Card img="/img/card/card.svg" alt="Konser Resmi" mounth="Mayıs" day="22" head="Eypio Konseri!" desc="Lorem ipsum dolor sit amet." location="Kutahya / Turkey"></Card>

@@ -11,7 +11,6 @@ export default {
 const Template = (args) => <Card {...args} />;
 
 export const Primary = Template.bind({});
-// export const Direction = Template.bind({});
 
 Primary.args = {
     data: {
@@ -23,6 +22,3 @@ Primary.args = {
         "id": "c419fe48-5641-47e2-a245-766773bc7a62"
     }
 };
-// Direction.args = {
-//     direction: "right"
-// };
