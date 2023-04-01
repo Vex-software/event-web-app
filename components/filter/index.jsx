@@ -3,11 +3,7 @@ import { useState } from "react";
 import { BiDownArrow } from 'react-icons/bi';
 import { BiUpArrow } from 'react-icons/bi';
 import Toggle from '@/components/toggle'
-<<<<<<< Updated upstream
-import Checkbox from '@/components/form/checkbox/'
-=======
 import Checkbox from '@/components/form/checkbox/index.jsx'
->>>>>>> Stashed changes
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
