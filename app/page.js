@@ -1,4 +1,4 @@
-import { Card } from "@/components";
+import { Card, CardSoon } from "@/components";
 
 export default function Home() {
   let data = {
@@ -15,6 +15,7 @@ export default function Home() {
 
         <div className='mb-4'>
           <Card data={data} />
+          <CardSoon data={data} />
         </div>
       </div>
     </main>
