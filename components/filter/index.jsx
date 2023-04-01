@@ -3,7 +3,11 @@ import { useState } from "react";
 import { BiDownArrow } from 'react-icons/bi';
 import { BiUpArrow } from 'react-icons/bi';
 import Toggle from '@/components/toggle'
+<<<<<<< Updated upstream
 import Checkbox from '@/components/form/checkbox/'
+=======
+import Checkbox from '@/components/form/checkbox/index.jsx'
+>>>>>>> Stashed changes
 
 function Dropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,13 +19,11 @@ function Dropdown() {
   return (
     <div className="flex flex-col w-60">
       <div className="mb-5 pb-5 border-b-2 border-[#0000000e]">
-        <h3 className="text-3xl  font-[Jost] ">Filters</h3>
+        <h3 className="text-3xl font-[Jost] ">Filters</h3>
       </div>
       <div className="mb-5 pb-5 border-b-2 border-[#0000000e]">
         <Toggle>Online</Toggle>
       </div>
-
-
     <div className="w-full">
   <button
     id="dropdownDefaultButton"
@@ -36,14 +38,11 @@ function Dropdown() {
       <BiUpArrow className={`${isOpen ? '' : 'hidden'}`} />
     </div>
   </button>
-
-  {!isOpen && (
     <div
       id="dropdown"
-      className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700"
+      className={`${isOpen?'h-auto':'h-0 overflow-hidden'} z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700`}
     >
-      <ul className="py-2 text-sm text-gray-700 max-h-60 overflow-y-auto"
-      aria-labelledby="dropdownDefaultButton">
+    <ul className="py-2 text-sm text-gray-700 max-h-60 overflow-y-auto" aria-labelledby="dropdownDefaultButton">
         <li><Checkbox message="Konser" /></li>
         <li><Checkbox message="Sanat" /></li>
         <li><Checkbox message="Söyleşi" /></li>
@@ -60,7 +59,7 @@ function Dropdown() {
         <li><Checkbox message="Yiyecek / İçecek" /></li>
       </ul>
     </div>
-  )}
+
 </div>
 
     </div>

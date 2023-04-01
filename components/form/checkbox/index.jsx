@@ -10,4 +10,3 @@ function Checkbox({id, name, message}) {
 }
 
 export default Checkbox
-

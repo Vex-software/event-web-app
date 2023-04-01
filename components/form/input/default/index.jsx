@@ -7,7 +7,7 @@ function Input({label, name, ...otherProps }) {
     return (
         <div className={`relative ${pad}`}>
             <label htmlFor={name} className="absolute top-0 left-1 font-[Raleway] font-bold">{label}</label>
-            <input name={name} {...otherProps} className={`py-1 px-3 border-2 border-[#0000006c] rounded-lg font-bold font-["Raleway"] text-xl focus:border-[3px] focus:border-[#7B61FF] outline-none`} />
+            <input name={name} {...otherProps} className={`py-2 px-3 w-full border-2 border-[#0000006c] rounded-lg font-bold font-["Raleway"] text-md focus:border-[#7B61FF] outline-none`} />
         </div>
 
     )
