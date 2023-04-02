@@ -8,6 +8,7 @@ export { default as Checkbox } from './form/checkbox/index.jsx'
 export { default as InputPass } from './form/input/password'
 export { default as Toggle } from './toggle'
 export { default as Dropdown } from './filter/index.jsx'
+export { default as Title } from './title/title.jsx'
 
 
 
