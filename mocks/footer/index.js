@@ -4,21 +4,21 @@ export const Blocks = [
         items: [
             {
                 title: "About Wex.com",
-                url: "/about"
+                url: "/"
             },
             {
                 title: "How it works",
-                url: "/about"
+                url: "/"
             },
             {
                 title: "Blog",
-                url: "/about"
+                url: "/"
             },
             {
                 title: "Careers",
-                url: "/careers"
+                url: "/"
             },
-         
+
         ]
     },
     {
@@ -26,17 +26,17 @@ export const Blocks = [
         items: [
             {
                 title: "Privacy Policy",
-                url: "/about"
+                url: "/"
             },
             {
                 title: "Terms & Conditions",
-                url: "/How-it-works"
+                url: "/"
             },
             {
                 title: "Careers",
-                url: "/careers"
+                url: "/"
             },
-            
+
         ]
     },
     {
@@ -44,18 +44,18 @@ export const Blocks = [
         items: [
             {
                 title: "Help Center",
-                url: "/Help Center"
+                url: "/"
             },
             {
                 title: "Contact us",
-                url: "Contact us"
+                url: "/"
             },
             {
                 title: "Press",
-                url: "/press"
+                url: "/"
             },
-          
+
         ]
     },
-   
+
 ]  

@@ -1,13 +1,15 @@
 "use client"
 import { useState } from 'react'
 
-function Pass({ label, name, ...otherProps }) {
+function Pass({ label, name, ...otherProps })
+{
 
   const [type, setType] = useState(false)
   const [inputValue, setInputValue] = useState("");
   const pad = label ? 'pt-7' : 'pt-0'
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e) =>
+  {
     setInputValue(e.target.value);
   };
 
@@ -18,8 +20,9 @@ function Pass({ label, name, ...otherProps }) {
       <input type={type ? 'text' : 'password'} name={name} value={inputValue} onChange={handleInputChange} {...otherProps} className={`py-2 px-3 border-2 border-[#0000006c] rounded-lg w-full font-bold font-["Raleway"] text-md focus:border-[#7B61FF] outline-none`} />
       {inputValue.trim() !== "" && (
         <button onClick={() => setType(!type)} className='p-0 px-2 text-left absolute top-[2.3rem] right-[1rem] rounded font-bold font-["Jost"] text-[#000] text-sm'>{type ? 'Hide' : 'Show'}</button>
-      )}
-    </div>
+      )
+      }
+    </div >
 
   )
 }

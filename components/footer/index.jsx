@@ -1,60 +1,49 @@
 import Link from 'next/link'
 import React from 'react'
-import { BsInstagram, BsFacebook, BsTwitter } from 'react-icons/bs';
+import { BsInstagram } from 'react-icons/bs';
+import { BsFacebook } from 'react-icons/bs';
+import { BsTwitter } from 'react-icons/bs';
+
 import { Blocks } from '@/mocks'
 
 
-function Footer() {
+function Footer()
+{
 
   return (
+    <footer className='w-full bg-[#4F4CEE]  text-white '>
+      <div className='container flex flex-wrap justify-between mx-auto px-4 py-8'>
 
-<footer className="bg-[#4f4cee] w-full  md:px-10 font-['Jost']">
-    <div className="mx-auto w-full p-4 py-6 lg:py-8">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0">
-              <Link href="/" className="flex items-center">
-                  <span className=" text-white text-[2.5rem] ">WeX.com</span>
-              </Link>
-          </div>
+        <div className='w-full md:w-1/4 px-4'><h2 className='text-7xl text-center'>WeX</h2></div>
 
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-          {
+
+        {
           Blocks.map((i, index) =>
-              <div key={index}>
-                  <ul className=" font-medium">
-                  <li className=' w-full mb-6'><Link href="/" className='mb-6 text-sm font-bold text-white '>{i.title}</Link></li>
-                    {
-                    i.items.map((i, index) => <li className='md:w-full w-1/3 mb-3 text-white ' key={index}><Link href={i.url}> {i.title} </Link></li>)
-                    }
-                  </ul>
-              </div>
-               )
-            }
-          </div>
-      </div>
-      <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-      <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-white  sm:text-center">© 2023 <Link href="/" className="hover:underline">WeX™</Link>. All Rights Reserved.
-          </span>
-          <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-              <Link href="#" className="text-white">             
-                    <BsFacebook></BsFacebook>          
-                  <span className="sr-only">Facebook page</span>
-              </Link>
-              <Link href="#" className="text-white">
-                    <BsInstagram></BsInstagram>          
-                  <span className="sr-only">Instagram page</span>
-              </Link>
-                <Link href="#" className="text-white"> 
-                    <BsTwitter></BsTwitter>           
-                  <span className="sr-only">Twitter page</span>
-              </Link>
-          </div>
-      </div>
-    </div>
-</footer>
+            <div key={index} className='w-full md:w-1/4 px-4'>
+              <ul className='leading-9 font-thin flex flex-row justify-center flex-wrap'>
+                <li className=' w-full '><Link href="/" className='font-bold text-xl border-b-2 md:border-none'>{i.title}</Link></li>
+                {
+                  i.items.map((i, index) => <li className='md:w-full w-1/3' key={index}><Link href={i.url}> {i.title} </Link></li>)
+                }
 
-)
+              </ul>
+            </div>
+          )
+        }
+
+        <div className='border-t-2 w-full md:py-2 py-10 md:px-24 items-center md:justify-between flex md:flex-row flex-col text-center '>
+          <div className='md:w-1/6 flex justify-center'>
+            <Link href="/"><BsInstagram className='text-xl mx-4 md:mr-4'></BsInstagram></Link>
+            <Link href="/"> <BsFacebook className='text-xl mx-4 md:mr-4'></BsFacebook></Link>
+            <Link href="/"><BsTwitter className='text-xl mx-4 md:mr-4'></BsTwitter></Link>
+          </div>
+          <div className='items-center'>
+            <p className='text-xl md:m-0 mt-2 mb-10'>© 2023 WeX - All Rigth Reserved</p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  )
 }
 export default Footer
-
