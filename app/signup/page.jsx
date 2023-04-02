@@ -51,7 +51,7 @@ export default function Home() {
            
 
 
-              <Button >Log In</Button>
+            <Button>Log In</Button>
           </form>
           <div className='mt-6 text-center text-[#4f4cee] text-md'>
               <Link href="/">Don&apos;t You Have an Account?</Link>

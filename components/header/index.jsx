@@ -75,7 +75,7 @@ function Header ({scrolled, active}) {
                 </button>
                 <div className={`flex ${state}`}>
                     <div className={`hidden  lg:block mx-2`}>
-                      <Button  isWhite >Sign Up</Button>
+                      <Button isWhite>Sign Up</Button>
                     </div>
                     <div className='mx-2'>
                       <Button  >Log In</Button>
