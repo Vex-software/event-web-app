@@ -1,118 +1,61 @@
 export const Blocks = [
     {
-        title: "About",
+        title: "ABOUT",
         items: [
             {
-                title: "About",
+                title: "About Wex.com",
                 url: "/about"
             },
             {
                 title: "How it works",
+                url: "/about"
+            },
+            {
+                title: "Blog",
+                url: "/about"
+            },
+            {
+                title: "Careers",
+                url: "/careers"
+            },
+         
+        ]
+    },
+    {
+        title: "LEGAL",
+        items: [
+            {
+                title: "Privacy Policy",
+                url: "/about"
+            },
+            {
+                title: "Terms & Conditions",
                 url: "/How-it-works"
             },
             {
                 title: "Careers",
                 url: "/careers"
             },
-            {
-                title: "Press",
-                url: "/press"
-            },
-            {
-                title: "Blog",
-                url: "/blog"
-            },
-            {
-                title: "Forum",
-                url: "/forum"
-            },
+            
         ]
     },
     {
-        title: "Partner With Us",
-        items: [
-            {
-                title: "Partnership Programs",
-                url: "/about"
-            },
-            {
-                title: "How it works",
-                url: "/How-it-works"
-            },
-            {
-                title: "Careers",
-                url: "/careers"
-            },
-            {
-                title: "Press",
-                url: "/press"
-            },
-            {
-                title: "Blog",
-                url: "/blog"
-            },
-            {
-                title: "Forum",
-                url: "/forum"
-            },
-        ]
-    },
-    {
-        title: "Support",
+        title: "SUPPORT",
         items: [
             {
                 title: "Help Center",
-                url: "/about"
+                url: "/Help Center"
             },
             {
-                title: "How it works",
-                url: "/How-it-works"
-            },
-            {
-                title: "Careers",
-                url: "/careers"
+                title: "Contact us",
+                url: "Contact us"
             },
             {
                 title: "Press",
                 url: "/press"
             },
-            {
-                title: "Blog",
-                url: "/blog"
-            },
-            {
-                title: "Forum",
-                url: "/forum"
-            },
+          
         ]
     },
-    {
-        title: "Get The App",
-        items: [
-            {
-                title: "Wex.com for Android",
-                url: "/about"
-            },
-            {
-                title: "How it works",
-                url: "/How-it-works"
-            },
-            {
-                title: "Careers",
-                url: "/careers"
-            },
-            {
-                title: "Press",
-                url: "/press"
-            },
-            {
-                title: "Blog",
-                url: "/blog"
-            },
-            {
-                title: "Forum",
-                url: "/forum"
-            },
-        ]
-    }
+   
 ]  
