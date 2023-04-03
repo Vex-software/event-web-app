@@ -1,6 +1,9 @@
 
+import React from 'react'
+import { Datepicker, Filter } from '@/components'
 
-export default function Home() {
+export default function Home()
+{
   let data = {
     "title": "irure cillum sit ad sit voluptate",
     "image": "https://picsum.photos/400/300",
@@ -13,7 +16,7 @@ export default function Home() {
     <main>
       <div className='p-10'>
         <div className='mb-4'>
-          
+          <Filter></Filter>
         </div>
       </div>
     </main>
