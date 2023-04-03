@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import { BsInstagram } from 'react-icons/bs';
-import { BsFacebook } from 'react-icons/bs';
-import { BsTwitter } from 'react-icons/bs';
+import { BsInstagram, BsFacebook, BsTwitter } from 'react-icons/bs';
+
 
 import { Blocks } from '@/mocks'
 
