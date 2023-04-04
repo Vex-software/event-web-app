@@ -1,9 +1,11 @@
 "use client"
 import { useState } from "react";
 import { Photos } from '@/mocks'
+import { MdArrowCircleLeft, MdArrowCircleRight } from 'react-icons/md';
 
 const Carousel = ({ items }) =>
 {
+
     const [activeIndex, setActiveIndex] = useState(0);
 
     const previousSlide = () =>
@@ -19,7 +21,7 @@ const Carousel = ({ items }) =>
     };
 
     return (
-        <div className="relative">
+        <div className="relative w-full h-[500px]">
             {
                 Photos.map((i, index) =>
                     <div
@@ -34,16 +36,17 @@ const Carousel = ({ items }) =>
                 )
             }
             <button
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 px-4 py-2 bg-gray-500 text-white rounded-l-md focus:outline-none"
+                className="absolute top-1/2 left-0 transform -translate-y-1/2 focus:outline-none text-4xl ml-2 text-[#ffffff]"
                 onClick={previousSlide}
             >
-                &lt;
+                <MdArrowCircleLeft />
             </button>
             <button
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 px-4 py-2 bg-gray-500 text-white rounded-r-md focus:outline-none"
+                className="absolute top-1/2 right-0 transform -translate-y-1/2 focus:outline-none text-4xl mr-2 text-[#ffffff]"
                 onClick={nextSlide}
             >
-                &gt;
+                <MdArrowCircleRight />
+
             </button>
         </div>
     );
