@@ -11,6 +11,8 @@ export { default as Filter } from './filter/index.jsx'
 export { default as Title } from './title/title.jsx'
 export { default as Datepicker } from './date-range/index.jsx'
 export { default as Carousel } from './carousel/index.jsx'
+export { default as Alert } from './alerts/index.jsx'
+
 
 
 
