@@ -17,6 +17,7 @@ export { default as Date } from './eventDetail/date/index.jsx'
 export { default as Community } from './eventDetail/community/index.jsx'
 export { default as Information } from './eventDetail/information/index.jsx'
 export { default as Headinfo } from './eventDetail/eventHead/index.jsx'
+export { default as Swiper } from './swiper/index.jsx'
 
 
 
