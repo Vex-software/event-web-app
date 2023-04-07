@@ -20,13 +20,13 @@ const breakpoints = {
         spaceBetween: 10,
     }
 };
-function MySwiper({ cardData })
+function MySwiper({ cardData, title })
 {
     return (
         <div className="w-full">
             <div className="w-full my-5 flex justify-between md:px-5  px-3 py-1 border-b border-[#00000015]">
                 <div className="text-xl font-[Raleway] font-bold md:text-2xl">
-                    Upcoming Events
+                    {title}
                 </div>
                 <div className="flex items-center text-sm text-[#4f4cee] md:text-base ">
                     <Link href="/" className="mr-1">View All</Link>
