@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { BsArrowRight } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Card, Title } from '@/components'
+import { Card, CardSoon, Title } from '@/components'
 import 'swiper/css';
 
 const breakpoints = {
