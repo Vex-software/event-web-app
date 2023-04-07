@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Filter, Alert, Carousel, Banner, Date, Community, Card, Information, Headinfo, Swiper } from '@/components'
+import { Filter, Alert, Carousel, Banner, Date, Community, Card, Information, Headinfo, AnimateNumber, Swiper } from '@/components'
 import { Photos } from '@/mocks'
 
 const cardData = [
@@ -85,12 +85,23 @@ export default function Home()
 {
   return (
     <main>
-      <div className=''>
-        <img src="/home/hero/hero-1.png" className='w-full ' />
+      <div className='relative'>
+        <img src="/home/hero/hero.svg" className='w-full ' />
+        <p className='w-[1000px] absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-7xl text-center font-black font-[Jost] text-[#4f4cee]'>Deneyimlerin Sınırını Zorla!</p>
       </div>
       <div>
-        <Swiper cardData={cardData} />
+        <AnimateNumber />
       </div>
+
+
+
+
+
+
+
+      {/* <div>
+        <Swiper title="deneme baslik" cardData={cardData} />
+      </div> */}
 
 
     </main>
