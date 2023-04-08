@@ -20,7 +20,8 @@ const breakpoints = {
         spaceBetween: 10,
     }
 };
-function MySwiper({ cardData, title })
+
+function MySwiper({ cardData, soonCardData, title, soon })
 {
     return (
         <div className="w-full">
@@ -35,28 +36,55 @@ function MySwiper({ cardData, title })
             </div>
 
             <div className="w-full mx-auto">
-                <Swiper
-                    spaceBetween={10}
-                    centeredSlides={true}
-                    slidesPerView={4}
-                    loop={true}
-                    pagination={{ clickable: true }}
-                    onSlideChange={() => console.log('slide change')}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    breakpoints={breakpoints}
-                >
-                    {cardData.map((card) => (
-                        <SwiperSlide key={card.id}>
-                            <Card
-                                image={card.image}
-                                title={card.title}
-                                date={card.date}
-                                description={card.description}
-                                location={card.location}
-                            />
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
+
+                {soon ?
+                    <Swiper
+                        spaceBetween={10}
+                        centeredSlides={true}
+                        slidesPerView={4}
+                        loop={true}
+                        pagination={{ clickable: true }}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        breakpoints={breakpoints}
+                    >
+                        {soonCardData.map((cardSoon) => (
+                            <SwiperSlide key={cardSoon.id}>
+                                <CardSoon
+                                    image={cardSoon.image}
+                                    title={cardSoon.title}
+                                    date={cardSoon.date}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                    :
+                    <Swiper
+                        spaceBetween={10}
+                        centeredSlides={true}
+                        slidesPerView={4}
+                        loop={true}
+                        pagination={{ clickable: true }}
+                        onSlideChange={() => console.log('slide change')}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        breakpoints={breakpoints}
+                    >
+                        {cardData.map((card) => (
+                            <SwiperSlide key={card.id}>
+                                <Card
+                                    image={card.image}
+                                    title={card.title}
+                                    date={card.date}
+                                    description={card.description}
+                                    location={card.location}
+                                />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+
+                }
+
             </div>
         </div>
     );
