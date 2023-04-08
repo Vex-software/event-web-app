@@ -4,39 +4,80 @@ import Image from 'next/image'
 import { Button, Filter, Alert, Carousel, Banner, Date, Title, Community, Card, Information, Headinfo, AnimateNumber, Swiper } from '@/components'
 import { Photos } from '@/mocks'
 import { blue } from 'tailwindcss/colors';
+const soonCardData = [
+  {
+    id: 1,
+    image: '/card/soonCard/card1.svg',
+    title: 'Hamilton Müzik',
+    date: '2023-04-15T10:00:00.000Z',
+  },
+  {
+    id: 1,
+    image: '/card/soonCard/card2.svg',
+    title: 'Evrende Sanal Gezi',
+    date: '2023-04-19T10:00:00.000Z',
+  },
+  {
+    id: 1,
+    image: '/card/soonCard/card3.svg',
+    title: 'Uluslararası Danslar',
+    date: '2023-04-28T10:00:00.000Z',
+  },
+  {
+    id: 1,
+    image: '/card/soonCard/card1.svg',
+    title: 'Hamilton Müzik',
+    date: '2023-04-15T10:00:00.000Z',
+  },
+  {
+    id: 1,
+    image: '/card/soonCard/card2.svg',
+    title: 'Evrende Sanal Gezi',
+    date: '2023-04-19T10:00:00.000Z',
+  },
+  {
+    id: 1,
+    image: '/card/soonCard/card3.svg',
+    title: 'Uluslararası Danslar',
+    date: '2023-04-28T10:00:00.000Z',
+  },
+]
+
+
+
 
 const cardData = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZXZlbnR8ZW58MHx8MHx8&w=1000&q=80',
-    title: 'Eypio Konseri!',
+    image: '/card/eventCard/card-1.svg',
+    title: 'Sıla Akustik',
+    date: '2023-04-11T10:00:00.000Z',
+    description: 'lorem ipsum dolor ipsum dolor sit amet. sit amet. lorem',
+    location: 'Kutahya / Turkey',
+  },
+  {
+    id: 1,
+    image: '/card/eventCard/card-2.svg',
+    title: 'Sefiller Tiyatrosu',
+    date: '2023-05-09T10:00:00.000Z',
+    description: 'lorem ipsum dolor ipsum dolor sit amet. sit amet. lorem',
+    location: 'Bursa / Turkey',
+  },
+  {
+    id: 1,
+    image: '/card/eventCard/card-3.svg',
+    title: 'Karakalem Sergisi',
     date: '2023-04-15T10:00:00.000Z',
     description: 'lorem ipsum dolor ipsum dolor sit amet. sit amet. lorem',
     location: 'Kutahya / Turkey',
   },
   {
     id: 1,
-    image: 'https://www1.chester.ac.uk/sites/default/files/styles/hero/public/Events%20Management%20festival%20image.jpg?itok=eJ3k-5R6',
-    title: 'Eypio Konseri!',
-    date: '2023-04-15T10:00:00.000Z',
+    image: '/card/eventCard/card-4.svg',
+    title: "Picasso'nun Dünyası",
+    date: '2023-04-30T10:00:00.000Z',
     description: 'lorem ipsum dolor ipsum dolor sit amet. sit amet. lorem',
-    location: 'Kutahya / Turkey',
-  },
-  {
-    id: 1,
-    image: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZXZlbnR8ZW58MHx8MHx8&w=1000&q=80',
-    title: 'Eypio Konseri!',
-    date: '2023-04-15T10:00:00.000Z',
-    description: 'lorem ipsum dolor ipsum dolor sit amet. sit amet. lorem',
-    location: 'Kutahya / Turkey',
-  },
-  {
-    id: 1,
-    image: 'https://www1.chester.ac.uk/sites/default/files/styles/hero/public/Events%20Management%20festival%20image.jpg?itok=eJ3k-5R6',
-    title: 'Eypio Konseri!',
-    date: '2023-04-15T10:00:00.000Z',
-    description: 'lorem ipsum dolor ipsum dolor sit amet. sit amet. lorem',
-    location: 'Kutahya / Turkey',
+    location: 'Eskisehir / Turkey',
   },
 ];
 
@@ -60,18 +101,42 @@ export default function Home()
             <p className='text-sm text-[#00000096] mb-8'>
               Bu noktada Üniversite'de ki tüm kulüplerin yaptığı etkinlikleri sizlerle buluşturuyoruz.
             </p>
-            <Link href="/" className='bg-[#4f4cee] py-2 px-4 text-lg text-white rounded'>Bize Katıl!</Link>
+            <Link href="/" className='bg-[#4f4cee] py-2 px-6 text-lg text-white rounded'>Bize Katıl!</Link>
           </div>
         </div>
       </div>
 
 
-      <div className='px-3'>
+      <div className="my-10">
         <div>
-          <Swiper title="deneme baslik" cardData={cardData} />
+          <Swiper title="Yaklaşan Etkinlikler" soonCardData={soonCardData} soon={true} />
         </div>
       </div>
 
+      <div className='mx-auto my-10'>
+        <div className='flex flex-col text-center w-60 mx-auto'>
+          <div className='mb-10 text-center mx-auto'>
+            <AnimateNumber number={1852} delay={.5} />
+            <p className='text-5xl text-[#000000a4] font-[Jost] font-bold'>Üye</p>
+          </div>
+          <div className='mb-10 text-center mx-auto'>
+            <AnimateNumber number={51} delay={20} />
+            <p className='text-5xl text-[#000000a4] font-[Jost] font-bold'>Kulüp</p>
+          </div>
+          <div className=' text-center mx-auto'>
+            <AnimateNumber number={170} delay={20} />
+            <p className='text-5xl text-[#000000a4] font-[Jost] font-bold'>Etkinlik</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div>
+        <div>
+          <Swiper title="Öne Çıkan Etkinlikler" cardData={cardData} soon={false} />
+        </div>
+      </div>
 
 
 
@@ -84,18 +149,7 @@ export default function Home()
 
 
 {/* Animate Number */ }
-{/* <div>
-            <AnimateNumber number={1852} delay={.5} />
-            <p>Üye</p>
-          </div>
-          <div>
-            <AnimateNumber number={51} delay={20} />
-            <p>Kulüp</p>
-          </div>
-          <div>
-            <AnimateNumber number={170} delay={20} />
-            <p>Etkinlik</p>
-          </div> */}
+
 
 
 
