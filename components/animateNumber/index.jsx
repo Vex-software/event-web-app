@@ -21,7 +21,7 @@ const AnimateNumber = ({ number, delay = 50 }) =>
         return () => clearInterval(interval);
     }, [count, number]);
 
-    return <span>{count}</span>;
+    return <span className="text-[#7F7DF3] text-6xl font-bold font-[Jost] md:text-8xl">{count}</span>;
 };
 
 export default AnimateNumber;
