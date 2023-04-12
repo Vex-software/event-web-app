@@ -1,6 +1,8 @@
 "use client"
 import { useState } from "react";
 import { BiDownArrow, BiUpArrow, BiCalendar } from 'react-icons/bi';
+import { FiFilter } from 'react-icons/fi';
+import { FaFilter } from 'react-icons/fa';
 import { Toggle, Checkbox, Datepicker, Title, Button } from '@/components'
 
 
@@ -14,59 +16,70 @@ function Dropdown()
   };
 
   return (
-    <div className="flex flex-col w-72 ">
-      <div className="mb-5 pb-5 border-b-2 border-[#0000000e]">
-        <h3 className="text-3xl font-[Jost] ">Filters</h3>
+
+    <div>
+      <div>
+        <button className="md:hidden flex items-center text-base " data-collapse-toggle="mobile-filter-menu" aria-controls="mobile-filter-menu" aria-expanded={isOpen} onClick={toggleDropdown}>
+          <FiFilter className={`${isOpen ? 'hidden' : ''}`}></FiFilter>
+          <FaFilter className={`${isOpen ? '' : 'hidden'}`}></FaFilter>
+          <p className="">Filters</p>
+        </button>
       </div>
-      <div className="mb-5 pb-5 border-b-2 border-[#0000000e]">
-        <Toggle>Online</Toggle>
-      </div>
-      <div className=" mb-5 pb-5 border-b-2 border-[#0000000e]">
-        <div className="mb-2"> <Title size="small"> Select Date</Title></div>
-        <Datepicker className=""></Datepicker>
-      </div>
-      <div className=" mb-5 pb-5 border-b-2 border-[#0000000e] w-full">
-        {/* <button
+      <div className={`flex flex-col w-72 bg-white md:block ${isOpen ? "absolute top-40 left-1/2 transform -translate-x-1/2" : "hidden"}`}>
+        <div className="mb-5 pb-5 border-b-2 border-[#0000000e]">
+          <h3 className="text-3xl font-[Jost] ">Filters</h3>
+        </div>
+        <div className="mb-5 pb-5 border-b-2 border-[#0000000e]">
+          <Toggle>Online</Toggle>
+        </div>
+        <div className=" mb-5 pb-5 border-b-2 border-[#0000000e]">
+          <div className="mb-2"> <Title size="small"> Select Date</Title></div>
+          <Datepicker className=""></Datepicker>
+        </div>
+        <div className=" mb-5 pb-5 border-b-2 border-[#0000000e] w-full">
+          {/* <button
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
           className="text-black hover:bg-[#4f4cee41] w-full px-4 py-2.5 text-lg rounded-lg text-center flex items-center justify-between"
           type="button"
           onClick={toggleDropdown}
         > */}
-        <div className="mb-2">
-          <Title size="small"> Kategoriler</Title>
-        </div>
-        {/* <div className="relative">
+          <div className="mb-2">
+            <Title size="small"> Kategoriler</Title>
+          </div>
+          {/* <div className="relative">
             <BiDownArrow className={`${isOpen ? 'hidden' : ''}`} />
             <BiUpArrow className={`${isOpen ? '' : 'hidden'}`} />
           </div> */}
-        {/* </button> */}
-        <div
-          id="dropdown"
-          // ${isOpen ? 'h-0 overflow-hidden' : 'h-auto'} 
-          className={`h-auto z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700`}>
-          <ul className="py-2 text-sm text-gray-700 max-h-60 overflow-y-auto" aria-labelledby="dropdownDefaultButton">
-            <li><Checkbox message="Konser" /></li>
-            <li><Checkbox message="Sanat" /></li>
-            <li><Checkbox message="Söyleşi" /></li>
-            <li><Checkbox message="Bilim" /></li>
-            <li><Checkbox message="Gezi / Seyehat" /></li>
-            <li><Checkbox message="Sağlık" /></li>
-            <li><Checkbox message="Spor" /></li>
-            <li><Checkbox message="Sinema" /></li>
-            <li><Checkbox message="Tiyatro" /></li>
-            <li><Checkbox message="Teknoloji" /></li>
-            <li><Checkbox message="Yazılım" /></li>
-            <li><Checkbox message="Turnuva" /></li>
-            <li><Checkbox message="Tasarım" /></li>
-            <li><Checkbox message="Yiyecek / İçecek" /></li>
-          </ul>
+          {/* </button> */}
+          <div
+            id="dropdown"
+            // ${isOpen ? 'h-0 overflow-hidden' : 'h-auto'} 
+            className={`h-auto z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full`}>
+            <ul className="py-2 text-sm text-gray-700 max-h-60 overflow-y-auto" aria-labelledby="dropdownDefaultButton">
+              <li><Checkbox message="Konser" /></li>
+              <li><Checkbox message="Sanat" /></li>
+              <li><Checkbox message="Söyleşi" /></li>
+              <li><Checkbox message="Bilim" /></li>
+              <li><Checkbox message="Gezi / Seyehat" /></li>
+              <li><Checkbox message="Sağlık" /></li>
+              <li><Checkbox message="Spor" /></li>
+              <li><Checkbox message="Sinema" /></li>
+              <li><Checkbox message="Tiyatro" /></li>
+              <li><Checkbox message="Teknoloji" /></li>
+              <li><Checkbox message="Yazılım" /></li>
+              <li><Checkbox message="Turnuva" /></li>
+              <li><Checkbox message="Tasarım" /></li>
+              <li><Checkbox message="Yiyecek / İçecek" /></li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div>
-        <Button >Değişiklikleri kaydet</Button>
-      </div>
-    </div >
+        <div>
+          <Button >Değişiklikleri kaydet</Button>
+        </div>
+      </div >
+    </div>
+
 
   );
 }
