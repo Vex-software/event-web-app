@@ -1,8 +1,8 @@
 "use client"
 import { useState } from "react";
 import { BiDownArrow, BiUpArrow, BiCalendar } from 'react-icons/bi';
-import { Toggle, Checkbox, Datepicker, Title } from '@/components'
-// import Checkbox from '@/components/form/checkbox/index.jsx'
+import { Toggle, Checkbox, Datepicker, Title, Button } from '@/components'
+
 
 function Dropdown()
 {
@@ -14,7 +14,7 @@ function Dropdown()
   };
 
   return (
-    <div className="flex flex-col w-64">
+    <div className="flex flex-col w-72 ">
       <div className="mb-5 pb-5 border-b-2 border-[#0000000e]">
         <h3 className="text-3xl font-[Jost] ">Filters</h3>
       </div>
@@ -22,26 +22,29 @@ function Dropdown()
         <Toggle>Online</Toggle>
       </div>
       <div className=" mb-5 pb-5 border-b-2 border-[#0000000e]">
-        <Title size="small"> Select Date</Title>
-        <Datepicker></Datepicker>
+        <div className="mb-2"> <Title size="small"> Select Date</Title></div>
+        <Datepicker className=""></Datepicker>
       </div>
       <div className=" mb-5 pb-5 border-b-2 border-[#0000000e] w-full">
-        <button
+        {/* <button
           id="dropdownDefaultButton"
           data-dropdown-toggle="dropdown"
           className="text-black hover:bg-[#4f4cee41] w-full px-4 py-2.5 text-lg rounded-lg text-center flex items-center justify-between"
           type="button"
           onClick={toggleDropdown}
-        >
-          Kategoriler
-          <div className="relative">
+        > */}
+        <div className="mb-2">
+          <Title size="small"> Kategoriler</Title>
+        </div>
+        {/* <div className="relative">
             <BiDownArrow className={`${isOpen ? 'hidden' : ''}`} />
             <BiUpArrow className={`${isOpen ? '' : 'hidden'}`} />
-          </div>
-        </button>
+          </div> */}
+        {/* </button> */}
         <div
           id="dropdown"
-          className={`${isOpen ? 'h-auto' : 'h-0 overflow-hidden'} z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700`}>
+          // ${isOpen ? 'h-0 overflow-hidden' : 'h-auto'} 
+          className={`h-auto z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700`}>
           <ul className="py-2 text-sm text-gray-700 max-h-60 overflow-y-auto" aria-labelledby="dropdownDefaultButton">
             <li><Checkbox message="Konser" /></li>
             <li><Checkbox message="Sanat" /></li>
@@ -60,10 +63,13 @@ function Dropdown()
           </ul>
         </div>
       </div>
-
+      <div>
+        <Button >Değişiklikleri kaydet</Button>
+      </div>
     </div >
 
   );
 }
 
 export default Dropdown
+
