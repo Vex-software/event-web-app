@@ -9,10 +9,10 @@ function index()
     const [startDate, endDate] = dateRange;
 
     return (
-        <div className='border-2 border-[#f0f0f0] w-full py-2 px-2 rounded-lg'>
+        <div className='border-2 border-[#f0f0f0] w-full  rounded-lg'>
 
             <DatePicker
-                className='border-none text-base active:outline-none active:border-none focus:outline-none'
+                className='border-none active:outline-none active:border-none focus:outline-none text-xs w-full md:text-sm'
                 placeholderText='Select a date range'
                 selectsRange={true}
                 startDate={startDate}
