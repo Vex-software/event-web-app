@@ -20,7 +20,7 @@ function Dropdown()
 
   return (
 
-    <div>
+    <div className="w-full">
       <div className="flex items-center px-3">
         <button className="md:hidden flex items-center text-lg  " data-collapse-toggle="mobile-filter-menu" aria-controls="mobile-filter-menu" aria-expanded={isOpen} onClick={toggleDropdown}>
           <FiFilter className={`text-2xl text-[#4f4cee] ${isOpen ? 'hidden' : ''}`}></FiFilter>
@@ -31,7 +31,7 @@ function Dropdown()
       </div>
 
       <div className={`w-full h-screen bg-white ${!isOpen ? 'hidden' : ''}`} />
-      <div className={`flex flex-col w-72  bg-white md:block ${isOpen ? "absolute top-24 left-1/2 transform -translate-x-1/2" : "hidden"}`}>
+      <div className={`flex flex-col  bg-white md:block ${isOpen ? "absolute top-24 left-1/2 transform -translate-x-1/2" : "hidden"}`}>
         <div className="mb-5 pb-5 border-b-2 border-[#0000000e]">
           <h3 className="text-3xl font-[Jost] ">Filters</h3>
         </div>
@@ -45,9 +45,9 @@ function Dropdown()
             <li><Checkbox message="Tarih : Yakından Uzağa" /></li>
           </ul>
         </div>
-        <div className=" mb-5 pb-5 border-b-2 border-[#0000000e]">
+        <div className=" mb-5 pb-5 ">
           <div className="mb-2"> <Title size="small"> Select Date</Title></div>
-          <Datepicker className=""></Datepicker>
+          <Datepicker />
         </div>
         <div className=" mb-5 pb-5 border-b-2 border-[#0000000e] w-full">
 
@@ -57,7 +57,7 @@ function Dropdown()
 
           <div
             className={`h-auto z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full`}>
-            <ul className="py-2 text-sm text-gray-700 max-h-60 overflow-y-auto" >
+            <ul className="py-2 text-sm text-gray-700 lg:max-h-60 max-h-32 overflow-y-auto" >
               <li><Checkbox message="Konser" /></li>
               <li><Checkbox message="Sanat" /></li>
               <li><Checkbox message="Söyleşi" /></li>
