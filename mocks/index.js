@@ -1,2 +1,2 @@
-export { Blocks } from './footer/index'
-export { Photos } from './carousel/index'
+export { Blocks } from './footer/index.js';
+export { Photos } from './carousel/index.jsx';
