@@ -36,7 +36,7 @@ function Dropdown() {
   </button>
     <div
       id="dropdown"
-      className={`${isOpen?'h-auto':'h-0 overflow-hidden'} z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700`}
+      className={`${isOpen?'h-auto':'h-0 overflow-hidden'} z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-full`}
     >
     <ul className="py-2 text-sm text-gray-700 max-h-60 overflow-y-auto" aria-labelledby="dropdownDefaultButton">
         <li><Checkbox message="Konser" /></li>
