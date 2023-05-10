@@ -13,7 +13,7 @@ function Card({ url = "/", image, title, date, description, location })
             <div className='w-full h-[60%]'>
                 <Link href={url}><img className='w-full h-full rounded-tl-md rounded-tr-md layout object-center object-cover' src={image} alt={title} /></Link>
             </div>
-            <div className='w-full flex items-center'>
+            <div className='w-full flex h-[40%] py-5 items-center'>
                 <div className='w-[20%] '>
                     <Link href={url}>   <p className='text-center font-bold'>{DateTime.fromISO(date).setLocale('tr').toFormat('d')}</p></Link>
                     <Link href={url}>   <p className='text-center font-bold'>{DateTime.fromISO(date).setLocale('tr').toFormat('MMM')}</p></Link>
