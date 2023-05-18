@@ -1,15 +1,13 @@
 "use client"
 import { useState } from 'react'
 
-function Pass({ label, name, ...otherProps })
-{
+function Pass({ label, name, ...otherProps }) {
 
   const [type, setType] = useState(false)
   const [inputValue, setInputValue] = useState("");
   const pad = label ? 'pt-7' : 'pt-0'
 
-  const handleInputChange = (e) =>
-  {
+  const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
 

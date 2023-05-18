@@ -2,8 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 import { CgCommunity } from 'react-icons/cg';
 import { GoCalendar, GoLocation } from 'react-icons/go';
-function Eventhead({ title, clubUrl = "/", community, date, location, desc })
-{
+function Eventhead({ title, clubUrl = "/", community, date, location, desc }) {
     return (
         <div className='w-full md:w-[34rem]'>
             <div className='font-[Raleway] my-3 font-bold text-3xl'>

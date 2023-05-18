@@ -1,7 +1,6 @@
 import React from 'react'
 
-function Input({ label, name, ...otherProps })
-{
+function Input({ label, name, ...otherProps }) {
 
     const pad = label ? 'pt-7' : 'pt-0'
 

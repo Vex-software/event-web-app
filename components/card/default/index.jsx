@@ -1,12 +1,10 @@
-import Image from 'next/image';
 import React from 'react'
 import Link from 'next/link';
 import { GoLocation } from 'react-icons/go';
 import { DateTime } from 'luxon'
 
 
-function Card({ url = "/", image, title, date, description, location })
-{
+function Card({ url = "/", image, title, date, description, location }) {
 
     return (
         <div className=' w-full h-full cursor-pointer font-["Raleway"] border-2  border-[#4f4cee83] rounded-md'>

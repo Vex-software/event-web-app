@@ -1,19 +1,15 @@
 "use client"
 import { useState } from "react";
-import { BiDownArrow, BiUpArrow, BiCalendar } from 'react-icons/bi';
 import { FiFilter } from 'react-icons/fi';
 import { FaFilter } from 'react-icons/fa';
-import { BsArrowDownUp } from 'react-icons/bs';
 
 import { Toggle, Checkbox, Datepicker, Title, Button } from '@/components'
 
 
-function Dropdown()
-{
+function Filter() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleDropdown = () =>
-  {
+  const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
@@ -85,5 +81,5 @@ function Dropdown()
   );
 }
 
-export default Dropdown
+export default Filter
 

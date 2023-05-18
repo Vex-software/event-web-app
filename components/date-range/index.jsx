@@ -3,8 +3,7 @@ import React, { useState } from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-function index()
-{
+function Index() {
     const [dateRange, setDateRange] = useState([null, null]);
     const [startDate, endDate] = dateRange;
 
@@ -17,8 +16,7 @@ function index()
                 selectsRange={true}
                 startDate={startDate}
                 endDate={endDate}
-                onChange={(update) =>
-                {
+                onChange={(update) => {
                     setDateRange(update);
                 }}
                 isClearable={true}
@@ -27,4 +25,4 @@ function index()
     );
 }
 
-export default index;
+export default Index;

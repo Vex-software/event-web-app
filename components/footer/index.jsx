@@ -6,8 +6,7 @@ import { BsInstagram, BsFacebook, BsTwitter } from 'react-icons/bs';
 import { Blocks } from '@/mocks'
 
 
-function Footer()
-{
+function Footer() {
 
   return (
     <footer className='w-full bg-[#4F4CEE]  text-white '>
