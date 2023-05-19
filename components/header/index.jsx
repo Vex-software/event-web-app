@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { CgProfile } from 'react-icons/cg';
 import { AiOutlineMenu } from 'react-icons/ai';
+import { Menu } from '@/mocks';
 function Header({ scrolled, active }) {
   const state = active ? 'hidden' : ''
   const hide = active ? '' : 'hidden'
@@ -27,21 +28,13 @@ function Header({ scrolled, active }) {
 
         <div className={`w-full  z-30 text-center items-center justify-between md:flex md:w-auto md:order-1 ${isMenuOpen ? "absolute top-[2.8rem] left-0" : "hidden"} `}>
           <ul className="  flex flex-col p-4 mt-4 border md:mx-auto border-gray-100 rounded-b-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
-            <li>
-              <Link href="#" className="block font-[Jost] font-thin text-xl py-2 pl-3 pr-4 text-white bg-[#4F4CEE] rounded md:bg-transparent md:text-[#4F4CEE] md:p-0 " aria-current="page">Home</Link>
-            </li>
-            <li>
-              <Link href="#" className="block font-[Jost] font-thin  text-xl py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4F4CEE] md:p-0">About</Link>
-            </li>
-            <li>
-              <Link href="#" className="block font-[Jost] font-thin text-xl py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4F4CEE] md:p-0">Services</Link>
-            </li>
-            <li>
-              <Link href="#" className="block font-[Jost] font-thin  text-xl py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4F4CEE] md:p-0">Pricing</Link>
-            </li>
-            <li>
-              <Link href="#" className="block font-[Jost] font-thin  text-xl py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4F4CEE] md:p-0">Contact</Link>
-            </li>
+            {
+              Menu.map((i, index) =>
+                <li key={index}>
+                  <Link href={i.slug} className="block font-[Jost] font-thin  text-xl py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#4F4CEE] md:p-0">{i.title}</Link>
+                </li>
+              )
+            }
           </ul>
         </div>
 
