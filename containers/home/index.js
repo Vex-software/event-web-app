@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import Image from 'next/image'
 import { SlArrowDown } from 'react-icons/sl';
 import { Button, Carousel, Input, Title, AnimateNumber } from '@/components'
 import { CardsSoon, Cards } from '@/mocks'
@@ -11,7 +11,7 @@ function Page() {
         <main>
             <div className='relative mb-10'>
                 <div className='w-full h-60 lg:h-full'>
-                    <img src="/home/hero/hero.svg" className='w-full h-full object-cover' />
+                    <Image width={1920} height={1080} src="/home/hero/hero.svg" className='w-full h-full object-cover' />
                 </div>
                 <p className='lg:w-[1000px] md:w-[650px] lg:text-7xl md:text-5xl text-4xl w-[300px] absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center font-black font-[Jost] text-[#4f4cee]'>Deneyimlerin Sınırını Zorla!</p>
             </div>
