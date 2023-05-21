@@ -19,14 +19,14 @@ function Header({ scrolled, active }) {
     setIsMenuOpen(!isMenuOpen);
   }
   return (
-    <nav className={` bg-white border-gray-200 sm:px-4 ${padd}   rounded border-b-2  relative`}>
+    <header className={` bg-white border-gray-200 sm:px-4 ${padd}   rounded border-b-2  relative`}>
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         <div className={`${actived} text-center `}>
-          <Title color="default" size="large">WeX</Title>
+          <Title color="default" size="large">wex</Title>
         </div>
 
 
-        <div className={`w-full  z-30 text-center items-center justify-between md:flex md:w-auto md:order-1 ${isMenuOpen ? "absolute top-[2.8rem] left-0" : "hidden"} `}>
+        <nav className={`w-full  z-30 text-center items-center justify-between md:flex md:w-auto md:order-1 ${isMenuOpen ? "absolute top-[2.8rem] left-0" : "hidden"} `}>
           <ul className="  flex flex-col p-4 mt-4 border md:mx-auto border-gray-100 rounded-b-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white ">
             {
               Menu.map((i, index) =>
@@ -36,7 +36,7 @@ function Header({ scrolled, active }) {
               )
             }
           </ul>
-        </div>
+        </nav>
 
 
         <div className={`z-30 text-center  ${actived}  md:order-2 relative`}>
@@ -74,13 +74,9 @@ function Header({ scrolled, active }) {
               </div>
             </div>
           </div>
-
-
-
-
         </div>
       </div>
-    </nav>
+    </header>
   )
 }
 export default Header
